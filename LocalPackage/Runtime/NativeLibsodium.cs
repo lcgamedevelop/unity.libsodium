@@ -867,12 +867,6 @@ namespace unity.libsodium
         public static extern int crypto_core_ed25519_from_uniform([NativeTypeName("unsigned char *")] byte* p, [NativeTypeName("const unsigned char *")] byte[] r);
 
         [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int crypto_core_ed25519_from_string([NativeTypeName("unsigned char[32]")] byte* p, [NativeTypeName("const char *")] sbyte* ctx, [NativeTypeName("const unsigned char *")] byte[] msg, [NativeTypeName("size_t")] UIntPtr msg_len, int hash_alg);
-
-        [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int crypto_core_ed25519_from_string_ro([NativeTypeName("unsigned char[32]")] byte* p, [NativeTypeName("const char *")] sbyte* ctx, [NativeTypeName("const unsigned char *")] byte[] msg, [NativeTypeName("size_t")] UIntPtr msg_len, int hash_alg);
-
-        [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void crypto_core_ed25519_random([NativeTypeName("unsigned char *")] byte* p);
 
         [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -898,9 +892,6 @@ namespace unity.libsodium
 
         [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void crypto_core_ed25519_scalar_reduce([NativeTypeName("unsigned char *")] byte* r, [NativeTypeName("const unsigned char *")] byte[] s);
-
-        [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int crypto_core_ed25519_scalar_is_canonical([NativeTypeName("const unsigned char *")] byte[] s);
 
         [NativeTypeName("#define crypto_core_ed25519_BYTES 32")]
         public const int crypto_core_ed25519_BYTES = 32;
@@ -1014,12 +1005,6 @@ namespace unity.libsodium
         public static extern int crypto_core_ristretto255_from_hash([NativeTypeName("unsigned char *")] byte* p, [NativeTypeName("const unsigned char *")] byte[] r);
 
         [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int crypto_core_ristretto255_from_string([NativeTypeName("unsigned char[32]")] byte* p, [NativeTypeName("const char *")] sbyte* ctx, [NativeTypeName("const unsigned char *")] byte[] msg, [NativeTypeName("size_t")] UIntPtr msg_len, int hash_alg);
-
-        [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int crypto_core_ristretto255_from_string_ro([NativeTypeName("unsigned char[32]")] byte* p, [NativeTypeName("const char *")] sbyte* ctx, [NativeTypeName("const unsigned char *")] byte[] msg, [NativeTypeName("size_t")] UIntPtr msg_len, int hash_alg);
-
-        [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void crypto_core_ristretto255_random([NativeTypeName("unsigned char *")] byte* p);
 
         [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -1045,9 +1030,6 @@ namespace unity.libsodium
 
         [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
         public static extern void crypto_core_ristretto255_scalar_reduce([NativeTypeName("unsigned char *")] byte* r, [NativeTypeName("const unsigned char *")] byte[] s);
-
-        [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-        public static extern int crypto_core_ristretto255_scalar_is_canonical([NativeTypeName("const unsigned char *")] byte[] s);
 
         [NativeTypeName("#define crypto_core_ristretto255_BYTES 32")]
         public const int crypto_core_ristretto255_BYTES = 32;

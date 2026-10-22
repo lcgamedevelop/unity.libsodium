@@ -1,5 +1,11 @@
 # unity.libsodium
 
+## lcgame 修复记录
+
+| 日期 | 修改 | 验证 |
+| --- | --- | --- |
+| 2026-10-22 | 保留 iOS 稳定版绑定修复：在 `LocalPackage/Runtime/NativeLibsodium.cs` 移除 ed25519/ristretto255 各自的 `from_string`、`from_string_ro`、`scalar_is_canonical` 六项未导出声明。 | 静态核对剩余 642 个 P/Invoke，保留上游 WebGL 宏；全部原生库与上游一致。Windows 原生初始化、加解密、篡改拒绝检查通过；本次未重跑 iOS 真机测试。 |
+
 ## What's this?
 
  I decided that there should be a simpler way and I created **unity.libsodium**, a plugin that helps you to use [libsodium](https://github.com/jedisct1/libsodium/) in your Unity3d projects in a clear and easy way and works in **iOS, Android, OSX, Windows, WebGL** projects.
